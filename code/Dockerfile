@@ -4,8 +4,8 @@
 # Feel free to change as needed.
 FROM python:3.7
 
-LABEL author="Your team name"
-LABEL description="Description of project here."
+LABEL author="Matt McLaughlin"
+LABEL description="This is a review classifier."
 
 # Create app directory
 WORKDIR /app
@@ -23,3 +23,6 @@ RUN jupyter contrib nbextension install --user
 RUN pip install -U green==3.1.0
 # Project-specific deps
 RUN pip install -r requirements.txt
+
+
+CMD ["python", "./review_classifier.py"]
